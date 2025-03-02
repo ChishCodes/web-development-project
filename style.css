@@ -1,0 +1,79 @@
+/*Main header*/
+h1{
+    margin:0.5%;
+    color:rgb(22, 89, 205);
+    font-family:Helvetica;
+}
+
+/*body configs*/
+body{
+    margin:0%;
+   background-color:skyblue ; 
+}
+
+/*Rest of text and content*/
+p, h2, h3, h4, ul, table {
+    margin:0.5%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Table configs*/
+table {
+    margin:0.5%;
+    width: 40%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+/*Link hover settings for other Pages*/
+a:hover {
+    color:aqua;
+}
+
+/*Navigation settings*/
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.main-menu {
+    display: flex;
+    background-color: #c3eff9;
+    border-top: 4px solid #150197bb;
+    justify-content: space-around; 
+    padding: 15px 2%;
+}
+.main-menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333333;
+    padding: 10px 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main-menu li a:hover {
+    color: #007BFF;
+    text-decoration-line: underline;
+}
+caption {
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+/*Image on Home Page*/
+.main-image {
+    text-align: center;
+}
+
+/*Footer configs*/
+footer {
+    text-align:center;
+    background-color: #15019756;
+    padding:15px 15px;
+    margin: 0%;
+    width: 100%;
+}
