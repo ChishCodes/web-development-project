@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titled the webpage using Main Home title-->
+    <title>Web Development Project 1 | Self-Assessment Quiz</title>
+    <!--Linked my style CSS file-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page1.html">Early Browsers</a></li>
+                <li><a href="page2.html">Impact of Web Browsers</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="quizpage.html">Self-Assessment Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+<br>
+
+<!--the questions-->
+
+<h1>Test Yourself! | Self-Assessment Test</h1><br>
+
+<p>Q1. Which web browser was developed by Tim Berners-Lee in 1989?</p>
+<!--Marking the correct answers with id-->
+<label><input type="radio" name="q1" id="correct1"> World Wide Web browser</label><br> 
+<label><input type="radio" name="q1"> Mosaic</label><br>
+<label><input type="radio" name="q1"> Internet Explorer</label><br>
+<label><input type="radio" name="q1"> Netscape Navigator</label><br>
+<p id="q1"style="display:none">Correct answer: World Wide Web browser</p>
+<button type="button" onclick="document.getElementById('q1').style.display='block'">Check answer</button>
+<br>
+
+<p>Q2. What significant feature did Mosaic introduce as a web browser?</p>
+<!--Marking the correct answer-->
+<label><input type="radio" name="q2"> User-friendly interface</label><br>
+<label><input type="radio" name="q2" id="correct2"> Graphical display of multimedia</label><br>
+<label><input type="radio" name="q2"> Tabbed browsing</label><br>
+<label><input type="radio" name="q2"> Ad blocker</label><br>
+<p id="q2"style="display:none">Correct answer: Graphical display of multimedia</p>
+<button type="button" onclick="document.getElementById('q2').style.display='block'">Check answer</button>
+<br>
+
+<p>Q3. What was a significant reason for the discontinuation of Internet Explorer?</p>
+<!--Marking the correct answer-->
+<label><input type="radio" name="q3"> It was never popular among users.</label><br>
+<label><input type="radio" name="q3"> It was the first web browser ever created.</label><br>
+<label><input type="radio" name="q3" id="correct3"> It faced heavy competition from other browsers.</label><br>
+<label><input type="radio" name="q3"> It was developed by Tim Berners-Lee.</label><br>
+<p id="q3"style="display:none">Correct answer: It faced heavy competition from other browsers.</p>
+<button type="button" onclick="document.getElementById('q3').style.display='block'">Check answer</button>
+<br>
+
+<p>Q4. Which of the following browsers were mentioned as having been discontinued? (Select all that apply)</p>
+<!--Marking the correct answers (more than 1)-->
+<label><input type="checkbox" name="q4"> Google Chrome</label><br>
+<label><input type="checkbox" name="q4"> Microsoft Edge</label><br>
+<label><input type="checkbox" name="q4" id="correct4"> Netscape Navigator</label><br>
+<label><input type="checkbox" name="q4" id="correct4"> Internet Explorer</label><br>
+<p id="q4"style="display:none">Correct answer: Netscape Navigator, Internet Explorer</p>
+<button type="button" onclick="document.getElementById('q4').style.display='block'">Check answer</button>
+<br>
+
+<p>Q5. The first web browser, created by Tim Berners-Lee in 1989, was part of the ________ project at CERN. (Fill in the blank with lower case letters only)</p>
+<!--Marking the correct answer-->
+<input type="text" name="q5"><br>
+<p id="q5"style="display:none">Correct answer: World Wide Web</p>
+<button type="button" onclick="document.getElementById('q5').style.display='block'">Check answer</button>
+<br><br>
+
+<!--The submission button and retake quiz button-->
+<input type="submit" name="submit" value="Submit Quiz" onclick="result()">
+<input type="button" value="Retake Quiz" onclick="resetQuiz()">
+<script type="text/JavaScript">
+    function result() {
+        let score = 0;
+        let message = ""; //Added a message variable
+        if (document.getElementById('correct1').checked)
+        {
+            score++;
+            window.alert("You got Question 1 Correct");
+        }
+        if (document.getElementById('correct2').checked)
+        {
+            score++;
+            window.alert("You got Question 2 Correct");
+        }
+        if (document.getElementById('correct3').checked)
+        {
+            score++;
+            window.alert("You got Question 3 Correct");
+        }
+        if (document.getElementById('correct4').checked)
+        {
+            score++;
+            window.alert("You got Question 4 Correct");
+        }
+        const answerQ5 = document.querySelector('input[name="q5"]').value.trim();
+        if (answerQ5.toLowerCase() === "world wide web") {
+            score++;
+            window.alert("You got Question 5 Correct");
+        }
+
+        if (score > 2) {
+            message += "You passed!\n";
+        } else {
+            message += "You failed.\n";
+        }
+        
+        window.alert("Your score is: " + score + "\n" + message);
+    }
+//Extensive research to learn how to create a quiz reset function:
+function resetQuiz() {
+    //Resetting selections
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio=> {
+        radio.checked = false;
+    });
+
+    //Reset
+    const checks = document.querySelectorAll('input[type="checkbox"]');
+    checks.forEach(checkbox=> {
+        checkbox.checked = false;
+    });
+    
+    //Reset text input
+    const textinput = document.querySelector('input[name="q5"]');
+    textinput.value='';
+    
+}
+</script>
+
+<br>
+<br>
+<!--I included a footer at the bottom of each page for professionalism-->
+<footer>© 2025 | Created using VS Code by Chishamiso Kwenda</footer>
+
+</body>
+</html>
