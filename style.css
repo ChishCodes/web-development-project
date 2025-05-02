@@ -1,79 +1,174 @@
 /*Main header*/
 h1{
     margin:0.5%;
-    color:rgb(22, 89, 205);
-    font-family:Helvetica;
+    color: #161137;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration:underline;
 }
 
 /*body configs*/
 body{
     margin:0%;
-   background-color:skyblue ; 
+    background-color:skyblue ; 
 }
 
 /*Rest of text and content*/
-p, h2, h3, h4, ul, table {
+.image_description {
+    font-size: 12px;
+    font-style:italic;
+}
+
+p, h3, h4, ul, table {
     margin:0.5%;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:larger;
+}
+
+h2 {
+    text-align:center;
+    font-family:'Verdana';
+    font: 60px;
+    color:#003459;
 }
 
 /*Table configs*/
 table {
     margin:0.5%;
-    width: 40%;
+    width: 70%;
     border-collapse: collapse;
 }
 th, td {
-    border: 1px solid black;
+    border: 3px solid black;
     padding: 8px;
-    text-align: left;
+    text-align: center;
+}
+
+th {
+    background-color: #3369a3;
+    font-weight: bold;
+}
+
+caption {
+    font-weight: bold;
+    padding: 8px;
 }
 
 /*Link hover settings for other Pages*/
 a:hover {
-    color:aqua;
+    color:#67f2e9;
 }
 
 /*Navigation settings*/
 .main-menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-.main-menu {
-    display: flex;
-    background-color: #c3eff9;
-    border-top: 4px solid #150197bb;
-    justify-content: space-around; 
-    padding: 15px 2%;
-}
-.main-menu li a {
-    text-decoration: none;
+    list-style: none;
     font-weight: bold;
-    color: #333333;
-    padding: 10px 15px;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; /* To put the buttons in the center */
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 6px solid #003459;
+    border-bottom: 2px solid black;
+    border-left: 6px solid #003459;
+    background-color: #ffffff;
+    padding: 5px;
 }
-.main-menu li a:hover {
-    color: #007BFF;
-    text-decoration-line: underline;
+
+.main-menu li {
+    padding: 0px 0px;
+    margin: 0 0px;
+    background-color: #161137; 
+    border: 2px solid #080707;
+    transition: background-color 0.3s;
+    cursor: pointer;
 }
-caption {
-    font-size: 1.3em;
-    margin: 10px;
+
+.main-menu li a{
+    padding: 25px 62px;
+    justify-content: center;
+    color: #ffffff;
+    font-size:medium;
+    background-color: transparent;
+    text-decoration: none; /* This is where I removed any underlines */
+    display: block /* To make the whole list item act as a link but display as a block */
+}
+
+.main-menu li:hover {
+    background-color: rgb(50, 158, 230);
 }
 
 /*Image on Home Page*/
 .main-image {
     text-align: center;
+    max-width: 100%;
+    height: auto
 }
 
 /*Footer configs*/
 footer {
     text-align:center;
-    background-color: #15019756;
+    background-color: #155f94;
     padding:15px 15px;
     margin: 0%;
     width: 100%;
+}
+
+.keyword-image {
+    max-width: 100%;
+    height: auto
+}
+
+.mosaic_pic {
+    text-align: center;
+    max-width: 100%;
+    height: auto
+}
+
+.ipad {
+    text-align: center;
+    max-width: 100%;
+    height: auto
+}
+
+.quiz {
+    text-align: center;
+    max-width: 100%;
+    height: auto
+}
+
+nav, footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.self-assessment_test p, label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+}
+
+.self-assessment_test {
+    margin: 0.9%;
+}
+
+.self-assessment_test button, input {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 6px;
+    margin:1%;
+}
+
+.self-assessment_test button {
+    background-color: #161137;
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.retake_button {
+    margin: 1.9%;
+    padding: 6px;
+    background-color: #161137;
+    color:#ffffff;
+    cursor:pointer;
 }
