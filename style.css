@@ -1,6 +1,6 @@
 /*Main header*/
 h1{
-    margin:0.5%;
+    margin:1%;
     color: #161137;
     font-family:Arial, Helvetica, sans-serif;
     text-decoration:underline;
@@ -10,6 +10,7 @@ h1{
 body{
     margin:0%;
     background-color:skyblue ; 
+    overflow-x: hidden;
 }
 
 /*Rest of text and content*/
@@ -19,7 +20,7 @@ body{
 }
 
 p, h3, h4, ul, table {
-    margin:0.5%;
+    margin:1%;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:larger;
 }
@@ -33,7 +34,7 @@ h2 {
 
 /*Table configs*/
 table {
-    margin:0.5%;
+    margin:1%;
     width: 70%;
     border-collapse: collapse;
 }
@@ -70,6 +71,7 @@ a:hover {
     border-top: 6px solid #003459;
     border-bottom: 2px solid black;
     border-left: 6px solid #003459;
+    border-right: 6px solid #003459;
     background-color: #ffffff;
     padding: 5px;
 }
@@ -97,10 +99,33 @@ a:hover {
     background-color: rgb(50, 158, 230);
 }
 
-/*Image on Home Page*/
+/*Images*/
 .main-image {
     text-align: center;
-    max-width: 100%;
+    width: 100%;
+    height: auto
+}
+
+.keyword-image {
+    width: 100%;
+    height: auto
+}
+
+.mosaic_pic {
+    text-align: center;
+    width: 100%;
+    height: auto
+}
+
+.ipad {
+    text-align: center;
+    width: 100%;
+    height: auto
+}
+
+.quiz {
+    text-align: center;
+    width: 100%;
     height: auto
 }
 
@@ -108,42 +133,28 @@ a:hover {
 footer {
     text-align:center;
     background-color: #155f94;
-    padding:15px 15px;
-    margin: 0%;
+    padding:20px 0;
+    margin: 0;
     width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
-.keyword-image {
-    max-width: 100%;
-    height: auto
-}
 
-.mosaic_pic {
-    text-align: center;
-    max-width: 100%;
-    height: auto
-}
-
-.ipad {
-    text-align: center;
-    max-width: 100%;
-    height: auto
-}
-
-.quiz {
-    text-align: center;
-    max-width: 100%;
-    height: auto
-}
-
+/*Nav and footer configs*/ 
 nav, footer {
-    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+nav {
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+}
 
+/*Quiz page configs*/
 .self-assessment_test p, label {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px;
@@ -171,4 +182,44 @@ nav, footer {
     background-color: #161137;
     color:#ffffff;
     cursor:pointer;
+}
+
+/*configuring the responsive/mobile compatibilities*/
+@media (max-width: 768px) {
+    .keyword-image {
+        width: 50%;
+    }
+    .main-image {
+        width: 50%;
+    }
+    .ipad {
+        width: 50%;
+    }
+    .mosaic_pic {
+        width: 50%;
+    }
+    .quiz {
+        width: 50%;
+    }
+    footer {
+        padding: 15px 0;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 5px 0;
+    }
+    nav a {
+        padding: 8px;
+    }
+}
+
+@media (min-width: 720px) {
 }
