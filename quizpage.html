@@ -23,116 +23,136 @@
     </header>
 <br>
 
+
+
 <!--the questions-->
 
-<h1>Test Yourself! | Self-Assessment Test</h1><br>
+<h2>Test Yourself! | Self-Assessment Test</h2><br>
 
-<p>Q1. Which web browser was developed by Tim Berners-Lee in 1989?</p>
-<!--Marking the correct answers with id-->
-<label><input type="radio" name="q1" id="correct1"> World Wide Web browser</label><br> 
-<label><input type="radio" name="q1"> Mosaic</label><br>
-<label><input type="radio" name="q1"> Internet Explorer</label><br>
-<label><input type="radio" name="q1"> Netscape Navigator</label><br>
-<p id="q1"style="display:none">Correct answer: World Wide Web browser</p>
-<button type="button" onclick="document.getElementById('q1').style.display='block'">Check answer</button>
+<div class="quiz">
+    <img src="https://raw.githubusercontent.com/ChishCodes/web-development-project/refs/heads/main/for_pg_5_quiz.jpg" alt="Quiz" width="600" height="400">
+</div>
 <br>
 
-<p>Q2. What significant feature did Mosaic introduce as a web browser?</p>
-<!--Marking the correct answer-->
-<label><input type="radio" name="q2"> User-friendly interface</label><br>
-<label><input type="radio" name="q2" id="correct2"> Graphical display of multimedia</label><br>
-<label><input type="radio" name="q2"> Tabbed browsing</label><br>
-<label><input type="radio" name="q2"> Ad blocker</label><br>
-<p id="q2"style="display:none">Correct answer: Graphical display of multimedia</p>
-<button type="button" onclick="document.getElementById('q2').style.display='block'">Check answer</button>
-<br>
+<div class="self-assessment_test">
+<span id="answers"></span>
+<form onsubmit="return checkAnswers(this)">
+    <p>Q1. Which web browser was developed by Tim Berners-Lee in 1989?</p>
+    <!--Marking the correct answers with id-->
+    <label><input type="radio" name="q1" value="correct1"> World Wide Web browser</label><br> 
+    <label><input type="radio" name="q1"> Mosaic</label><br>
+    <label><input type="radio" name="q1"> Internet Explorer</label><br>
+    <label><input type="radio" name="q1"> Netscape Navigator</label><br>
+    <p id="q1"style="display:none">Correct answer: World Wide Web browser</p>
+    <button type="button" onclick="document.getElementById('q1').style.display='block'">Check answer</button>
+    <br>
 
-<p>Q3. What was a significant reason for the discontinuation of Internet Explorer?</p>
-<!--Marking the correct answer-->
-<label><input type="radio" name="q3"> It was never popular among users.</label><br>
-<label><input type="radio" name="q3"> It was the first web browser ever created.</label><br>
-<label><input type="radio" name="q3" id="correct3"> It faced heavy competition from other browsers.</label><br>
-<label><input type="radio" name="q3"> It was developed by Tim Berners-Lee.</label><br>
-<p id="q3"style="display:none">Correct answer: It faced heavy competition from other browsers.</p>
-<button type="button" onclick="document.getElementById('q3').style.display='block'">Check answer</button>
-<br>
+    <p>Q2. What significant feature did Mosaic introduce as a web browser?</p>
+    <!--Marking the correct answer-->
+    <label><input type="radio" name="q2"> User-friendly interface</label><br>
+    <label><input type="radio" name="q2" value="correct2"> Graphical display of multimedia</label><br>
+    <label><input type="radio" name="q2"> Tabbed browsing</label><br>
+    <label><input type="radio" name="q2"> Ad blocker</label><br>
+    <p id="q2"style="display:none">Correct answer: Graphical display of multimedia</p>
+    <button type="button" onclick="document.getElementById('q2').style.display='block'">Check answer</button>
+    <br>
 
-<p>Q4. Which of the following browsers were mentioned as having been discontinued? (Select all that apply)</p>
-<!--Marking the correct answers (more than 1)-->
-<label><input type="checkbox" name="q4"> Google Chrome</label><br>
-<label><input type="checkbox" name="q4"> Microsoft Edge</label><br>
-<label><input type="checkbox" name="q4" id="correct4"> Netscape Navigator</label><br>
-<label><input type="checkbox" name="q4" id="correct4"> Internet Explorer</label><br>
-<p id="q4"style="display:none">Correct answer: Netscape Navigator, Internet Explorer</p>
-<button type="button" onclick="document.getElementById('q4').style.display='block'">Check answer</button>
-<br>
+    <p>Q3. What was a significant reason for the discontinuation of Internet Explorer?</p>
+    <!--Marking the correct answer-->
+    <label><input type="radio" name="q3"> It was never popular among users.</label><br>
+    <label><input type="radio" name="q3"> It was the first web browser ever created.</label><br>
+    <label><input type="radio" name="q3" value="correct3"> It faced heavy competition from other browsers.</label><br>
+    <label><input type="radio" name="q3"> It was developed by Tim Berners-Lee.</label><br>
+    <p id="q3"style="display:none">Correct answer: It faced heavy competition from other browsers.</p>
+    <button type="button" onclick="document.getElementById('q3').style.display='block'">Check answer</button>
+    <br>
 
-<p>Q5. The first web browser, created by Tim Berners-Lee in 1989, was part of the ________ project at CERN. (Fill in the blank with lower case letters only)</p>
-<!--Marking the correct answer-->
-<input type="text" name="q5"><br>
-<p id="q5"style="display:none">Correct answer: World Wide Web</p>
-<button type="button" onclick="document.getElementById('q5').style.display='block'">Check answer</button>
-<br><br>
+    <p>Q4. Which of the following browsers were mentioned as having been discontinued? (Select all that apply)</p>
+    <!--Marking the correct answers (more than 1)-->
+    <label><input type="checkbox" name="q4"> Google Chrome</label><br>
+    <label><input type="checkbox" name="q4"> Microsoft Edge</label><br>
+    <label><input type="checkbox" name="q4" value="correct4-1"> Netscape Navigator</label><br>
+    <label><input type="checkbox" name="q4" value="correct4-2"> Internet Explorer</label><br>
+    <p id="q4"style="display:none">Correct answer: Netscape Navigator, Internet Explorer</p>
+    <button type="button" onclick="document.getElementById('q4').style.display='block'">Check answer</button>
+    <br>
+
+    <p>Q5. The first web browser, created by Tim Berners-Lee in 1989, was part of the ________ project at CERN. (Fill in the blank with lower case letters only)</p>
+    <!--Marking the correct answer-->
+    <input type="text" name="q5"><br>
+    <p id="q5"style="display:none">Correct answer: World Wide Web</p>
+    <button type="button" onclick="document.getElementById('q5').style.display='block'">Check answer</button>
+    <br><br>
 
 <!--The submission button and retake quiz button-->
-<input type="submit" name="submit" value="Submit Quiz" onclick="result()">
-<input type="button" value="Retake Quiz" onclick="resetQuiz()">
-<script type="text/JavaScript">
-    function result() {
-        let score = 0;
-        let message = ""; //Added a message variable
-        if (document.getElementById('correct1').checked)
-        {
-            score++;
-            window.alert("You got Question 1 Correct");
-        }
-        if (document.getElementById('correct2').checked)
-        {
-            score++;
-            window.alert("You got Question 2 Correct");
-        }
-        if (document.getElementById('correct3').checked)
-        {
-            score++;
-            window.alert("You got Question 3 Correct");
-        }
-        if (document.getElementById('correct4').checked)
-        {
-            score++;
-            window.alert("You got Question 4 Correct");
-        }
-        const answerQ5 = document.querySelector('input[name="q5"]').value.trim();
-        if (answerQ5.toLowerCase() === "world wide web") {
-            score++;
-            window.alert("You got Question 5 Correct");
-        }
+<button type="submit">Submit Quiz</button>
+</form>
+</div>
 
-        if (score > 2) {
-            message += "You passed!\n";
-        } else {
-            message += "You failed.\n";
-        }
-        
-        window.alert("Your score is: " + score + "\n" + message);
+<p>Once you've clicked to submit the quiz, please scroll to the top of the page to view your score!</p>
+<br>
+<p>Click the button below to refresh your selections to retake the quiz.</p>
+<script>
+function checkAnswers(form) {
+    const correctAnswers = {
+        "q1": "correct1",
+        "q2": "correct2",
+        "q3": "correct3",
+        "q4": ["correct4-1", "correct4-2"], //had to include both the answers as valid to prevent one correct answer being selected counting the whole question as correct when its partially correct
+        "q5": "World Wide Web"
     }
-//Extensive research to learn how to create a quiz reset function:
-function resetQuiz() {
-    //Resetting selections
-    const radioButtons = document.querySelectorAll('input[type="radio"]');
-    radioButtons.forEach(radio=> {
-        radio.checked = false;
-    });
+    const formData = new FormData(form);
+    var userAnsweredCorrectly = [];
+	var checked = new Set();
+    //iterations to correctly detect the correct answers
+    for (var [name, value] of formData.entries()) {
+        if (checked.has(name)) continue;
+		checked.add(name)
+        const correct = correctAnswers[name]; 
+        if (Array.isArray(correct)) { 
+                var userValues = formData.getAll(name); 
+    
+        	if (
+            	userValues.length === correct.length &&
+            	userValues.sort().every((val, i) => val === correct.sort()[i])
+        	) {
+            userAnsweredCorrectly.push(name);
+        	}
+       } else if (value == correctAnswers[name]) { 
+           	userAnsweredCorrectly.push(name) 
+       }
 
-    //Reset
-    const checks = document.querySelectorAll('input[type="checkbox"]');
-    checks.forEach(checkbox=> {
-        checkbox.checked = false;
-    });
-    
-    //Reset text input
-    const textinput = document.querySelector('input[name="q5"]');
-    textinput.value='';
-    
+    }
+        const TOTAL_QUESTIONS = 5; 
+        const PASSING_QUESTIONS = 3; 
+        var score = userAnsweredCorrectly.length;
+        var percentage = (score / TOTAL_QUESTIONS) * 100; //accurately calculating the percentage
+        var passed = score >= PASSING_QUESTIONS; 
+    document.getElementById("answers").innerHTML = `You ${passed ? "passed! Amazing!" : "sadly failed."} You scored ${percentage}% !`;
+    return false;
+    }
+</script>
+
+<input class= "retake_button" type="button" value="Retake Quiz" onclick="resetQuiz()">
+
+<script type="text/JavaScript">
+    //Extensive research to learn how to create a quiz reset function:
+    function resetQuiz() {
+        //Resetting selections
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        radioButtons.forEach(radio=> {
+            radio.checked = false;
+        });
+
+        //Reset
+        const checks = document.querySelectorAll('input[type="checkbox"]');
+        checks.forEach(checkbox=> {
+            checkbox.checked = false;
+        });
+        
+        //Reset text input
+        const textinput = document.querySelector('input[name="q5"]');
+        textinput.value='';
 }
 </script>
 
